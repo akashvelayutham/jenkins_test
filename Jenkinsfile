@@ -2,10 +2,17 @@
 pipeline {
     agent any
 
-    environment {
-        JIRA_URL = 'https://akashvelayutham2202.atlassian.net'
-        JIRA_ISSUE = 'JAT-1'
-    }
+    parameters {
+    string(
+        name: 'JIRA_ISSUE',
+        defaultValue: 'JAT-1',
+        description: 'Jira ticket receiving the test results'
+    )
+}
+
+environment {
+    JIRA_URL = 'https://akashvelayutham2202.atlassian.net'
+}
 
     stages {
         stage('Checkout') {
