@@ -11,7 +11,7 @@ def test_hello_world():
 
 @pytest.mark.test_002
 def test_addition():
-    assert add(10, 20) == 50
+    assert add(10, 20) == 30
 
 
 @pytest.mark.test_003
