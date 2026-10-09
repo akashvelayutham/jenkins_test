@@ -45,11 +45,11 @@ pipeline {
             steps {
                 withCredentials([
                     string(
-                        credentialsId: 'jira-email',
+                        credentialsId: 'jira_test_api_mail_id',
                         variable: 'JIRA_EMAIL'
                     ),
                     string(
-                        credentialsId: 'jira-api-token',
+                        credentialsId: 'jira_test_api_token',
                         variable: 'JIRA_API_TOKEN'
                     )
                 ]) {
