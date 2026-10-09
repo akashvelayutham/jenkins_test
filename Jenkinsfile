@@ -12,6 +12,7 @@ pipeline {
 
 environment {
     JIRA_URL = 'https://akashvelayutham2202.atlassian.net'
+    JIRA_ISSUE = "${params.JIRA_ISSUE}"
 }
 
     stages {
