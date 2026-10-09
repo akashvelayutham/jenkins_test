@@ -27,6 +27,16 @@ pipeline {
                 '''
             }
         }
+
+        
+stage('Preview Jira Report') {
+    steps {
+        sh '''
+            .venv/bin/python scripts/publish_jira_results.py --preview
+        '''
+    }
+}
+
     }
 
     post {
